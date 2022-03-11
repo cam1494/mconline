@@ -1,5 +1,5 @@
-import java.io.File;
-import java.lang.reflect.Field;
+package com.bitepp.obcraft;
+
 import java.util.Arrays;
 
 import net.minecraft.client.main.Main;

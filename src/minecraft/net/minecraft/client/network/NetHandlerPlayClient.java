@@ -172,7 +172,6 @@ import net.minecraft.network.play.server.S47PacketPlayerListHeaderFooter;
 import net.minecraft.network.play.server.S48PacketResourcePackSend;
 import net.minecraft.network.play.server.S49PacketUpdateEntityNBT;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.realms.DisconnectedRealmsScreen;
 import net.minecraft.scoreboard.IScoreObjectiveCriteria;
 import net.minecraft.scoreboard.Score;
 import net.minecraft.scoreboard.ScoreObjective;
