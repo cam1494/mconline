@@ -1,296 +1,376 @@
 // This entire object is exported. Feel free to define private helper functions above it.
 registerNatives({
-  'org/lwjgl/opengl/GL20': {
+  'net/java/games/input/DummyWindow': {
 
-    'nglShaderSource(IIJIJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'createWindow()J': function(thread) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglShaderSource3(IIJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nDestroy(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
-    },
+    }
+
+  },
 
-    'nglCreateShader(IJ)I': function(thread, arg0, arg1) {
+  'net/java/games/input/IDirectInput': {
+
+    'createIDirectInput()J': function(thread) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglIsShader(IJ)Z': function(thread, arg0, arg1) {
+    'nEnumDevices(J)V': function(thread, javaThis, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglCompileShader(IJ)V': function(thread, arg0, arg1) {
+    'nRelease(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
-    },
+    }
+
+  },
 
-    'nglDeleteShader(IJ)V': function(thread, arg0, arg1) {
+  'net/java/games/input/IDirectInputDevice': {
+
+    'nCreatePeriodicEffect(J[BIIIIII[I[JIIIIIIIII)J': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglCreateProgram(J)I': function(thread, arg0) {
+    'nPoll(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglIsProgram(IJ)Z': function(thread, arg0, arg1) {
+    'nAcquire(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglAttachShader(IIJ)V': function(thread, arg0, arg1, arg2) {
+    'nUnacquire(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglDetachShader(IIJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetDeviceData(JILnet/java/games/input/DataQueue;[Ljava/lang/Object;II)I': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglLinkProgram(IJ)V': function(thread, arg0, arg1) {
+    'nGetDeviceState(J[I)I': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUseProgram(IJ)V': function(thread, arg0, arg1) {
+    'nSetDataFormat(JI[Lnet/java/games/input/DIDeviceObject;)I': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglValidateProgram(IJ)V': function(thread, arg0, arg1) {
+    'nEnumEffects(JI)I': function(thread, javaThis, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglDeleteProgram(IJ)V': function(thread, arg0, arg1) {
+    'nEnumObjects(JI)I': function(thread, javaThis, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform1f(IFJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetRangeProperty(JI[J)I': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform2f(IFFJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetDeadzoneProperty(JI)I': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform3f(IFFFJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nSetBufferSize(JI)I': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform4f(IFFFFJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
+    'nSetCooperativeLevel(JJI)I': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform1i(IIJ)V': function(thread, arg0, arg1, arg2) {
+    'nRelease(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
-    },
+    }
+
+  },
 
-    'nglUniform2i(IIIJ)V': function(thread, arg0, arg1, arg2, arg3) {
+  'net/java/games/input/IDirectInputEffect': {
+
+    'nRelease(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform3i(IIIIJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nSetGain(JI)I': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform4i(IIIIIJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
+    'nStart(JII)I': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform1fv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nStop(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
-    },
+    }
+
+  },
 
-    'nglUniform2fv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+  'net/java/games/input/LinuxEventDevice': {
+
+    'nOpen(Ljava/lang/String;Z)J': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform3fv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nUploadRumbleEffect(JIIIIIIII)I': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform4fv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nUploadConstantEffect(JIIIIIIIIIII)I': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform1iv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nEraseEffect(JI)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform2iv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nWriteEvent(JIII)V': function(thread, arg0, arg1, arg2, arg3) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform3iv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetInputID(J)Lnet/java/games/input/LinuxInputID;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniform4iv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetNumEffects(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniformMatrix2fv(IIZJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetVersion(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniformMatrix3fv(IIZJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetNextEvent(JLnet/java/games/input/LinuxEvent;)Z': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglUniformMatrix4fv(IIZJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetAbsInfo(JILnet/java/games/input/LinuxAbsInfo;)V': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetShaderiv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetBits(JI[B)V': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetProgramiv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetDeviceUsageBits(J[B)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetShaderInfoLog(IIJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetKeyStates(J[B)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetProgramInfoLog(IIJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetName(J)Ljava/lang/String;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetAttachedShaders(IIJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nClose(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
-    },
+    }
+
+  },
 
-    'nglGetUniformLocation(IJJ)I': function(thread, arg0, arg1, arg2) {
+  'net/java/games/input/LinuxJoystickDevice': {
+
+    'nOpen(Ljava/lang/String;)J': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetActiveUniform(IIIJJJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+    'nGetNextEvent(JLnet/java/games/input/LinuxJoystickEvent;)Z': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetUniformfv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetNumButtons(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetUniformiv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nGetNumAxes(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetShaderSource(IIJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetAxisMap(J)[B': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib1s(ISJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetButtonMap(J)[C': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib1f(IFJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetVersion(J)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib1d(IDJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetName(J)Ljava/lang/String;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib2s(ISSJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nClose(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
-    },
+    }
+
+  },
 
-    'nglVertexAttrib2f(IFFJ)V': function(thread, arg0, arg1, arg2, arg3) {
+  'net/java/games/input/OSXHIDDevice': {
+
+    'nGetDeviceProperties(J)Ljava/util/Map;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib2d(IDDJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nReleaseDevice(JJ)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib3s(ISSSJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetElementValue(JJLnet/java/games/input/OSXEvent;)V': function(thread, arg0, arg1, arg2) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib3f(IFFFJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nCreateQueue(J)J': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib3d(IDDDJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nOpen(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
+
+    'nClose(J)V': function(thread, arg0) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
 
-    'nglVertexAttrib4s(ISSSSJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
+  },
+
+  'net/java/games/input/OSXHIDDeviceIterator': {
+
+    'nCreateIterator()J': function(thread) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib4f(IFFFFJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
+    'nReleaseIterator(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
+
+    'nNext(J)Lnet/java/games/input/OSXHIDDevice;': function(thread, arg0) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
+
+  },
 
-    'nglVertexAttrib4d(IDDDDJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
+  'net/java/games/input/OSXHIDQueue': {
+
+    'nOpen(JI)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttrib4Nub(IBBBBJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5) {
+    'nClose(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttribPointer(IIIZIJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
+    'nStart(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglVertexAttribPointerBO(IIIZIJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
+    'nStop(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglEnableVertexAttribArray(IJ)V': function(thread, arg0, arg1) {
+    'nReleaseQueue(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglDisableVertexAttribArray(IJ)V': function(thread, arg0, arg1) {
+    'nAddElement(JJ)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetVertexAttribfv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'nRemoveElement(JJ)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
+
+    'nGetNextEvent(JLnet/java/games/input/OSXEvent;)Z': function(thread, arg0, arg1) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
 
-    'nglGetVertexAttribdv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+  },
+
+  'net/java/games/input/RawDevice': {
+
+    'nGetName(J)Ljava/lang/String;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
+
+    'nGetInfo(Lnet/java/games/input/RawDevice;J)Lnet/java/games/input/RawDeviceInfo;': function(thread, arg0, arg1) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
+
+  },
+
+  'net/java/games/input/RawInputEnvironmentPlugin': {
 
-    'nglGetVertexAttribiv(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'enumerateDevices(Lnet/java/games/input/RawInputEventQueue;Ljava/util/List;)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetVertexAttribPointerv(IIJJ)Ljava/nio/ByteBuffer;': function(thread, arg0, arg1, arg2, arg3) {
+    'nEnumSetupAPIDevices([BLjava/util/List;)V': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetVertexAttribPointerv2(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'getKeyboardClassGUID()[B': function(thread) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglBindAttribLocation(IIJJ)V': function(thread, arg0, arg1, arg2, arg3) {
+    'getMouseClassGUID()[B': function(thread) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
+
+  },
+
+  'net/java/games/input/RawInputEventQueue': {
+
+    'nPoll(J)V': function(thread, javaThis, arg0) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
+
+    'nRegisterDevices(IJ[Lnet/java/games/input/RawDeviceInfo;)V': function(thread, arg0, arg1, arg2) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
 
-    'nglGetActiveAttrib(IIIJJJJJ)V': function(thread, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+  },
+
+  'net/java/games/input/WinTabContext': {
+
+    'nGetNumberOfSupportedDevices()I': function(thread) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglGetAttribLocation(IJJ)I': function(thread, arg0, arg1, arg2) {
+    'nOpen(J)J': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglDrawBuffers(IJJ)V': function(thread, arg0, arg1, arg2) {
+    'nClose(J)V': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
+
+    'nGetPackets(J)[Lnet/java/games/input/WinTabPacket;': function(thread, arg0) {
+      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+    }
+
+  },
+
+  'net/java/games/input/WinTabDevice': {
 
-    'nglStencilOpSeparate(IIIIJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetName(I)Ljava/lang/String;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglStencilFuncSeparate(IIIIJ)V': function(thread, arg0, arg1, arg2, arg3, arg4) {
+    'nGetAxisDetails(II)[I': function(thread, arg0, arg1) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglStencilMaskSeparate(IIJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetCursorNames(I)[Ljava/lang/String;': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     },
 
-    'nglBlendEquationSeparate(IIJ)V': function(thread, arg0, arg1, arg2) {
+    'nGetMaxButtonCount(I)I': function(thread, arg0) {
       console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
     }
 
