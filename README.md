@@ -6,7 +6,7 @@ If you appreciate this project, please join the [Obsidian Craft Discord Server](
 
 ## About
 
-The aim of this project is to get Minecraft 1.8.8 running in a browser. This is obviously an unintended way of running the game, so bugs, crashes, and low performance are to be expected while we iron out the code. Your patience while we try to get the game running well is appreciated.
+The aim of this project is to get Minecraft 1.6.4 running in a browser. This is obviously an unintended way of running the game, so bugs, crashes, and low performance are to be expected while we iron out the code. Your patience while we try to get the game running well is appreciated.
 
 If you encounter any bugs or crashes, please create an issue for this project. At the moment, we will not be taking bug reports for low performance, as code stability is the current top priority.
 

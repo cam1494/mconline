@@ -11,7 +11,7 @@ registerNatives({
     },
 
     'setDebug(Z)V': function(thread, javaThis, arg0) {
-      console.log('Ljava/lang/UnsatisfiedLinkError;', 'Native method not implemented.');
+      
     }
 
   }
