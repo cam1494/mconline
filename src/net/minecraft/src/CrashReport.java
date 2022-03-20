@@ -121,6 +121,7 @@ public class CrashReport {
 
       var1.append("\n\n");
       this.getSectionsInStringBuilder(var1);
+      var1.append("\nIf you see this, please file a bug report at https://github.com/obsidian-craft/mconline/issues or DM the developer at WitherOrNot#9078 on Discord\n");
       return var1.toString();
    }
 

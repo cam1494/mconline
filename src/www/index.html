@@ -1,0 +1,73 @@
+<script type="text/javascript" src="js/browserfs.js"></script>
+<script type="text/javascript" src="doppio.js"></script>
+<script type="text/javascript">
+    (function() {
+      var mfs = new BrowserFS.FileSystem.MountableFileSystem(),
+          fs = BrowserFS.BFSRequire('fs');
+      BrowserFS.initialize(mfs);
+      // Temporary storage.
+      mfs.mount('/tmp', new BrowserFS.FileSystem.InMemory());
+      // Use BrowserFS's IndexedDB file system for more storage.
+      mfs.mount('/gamedir', new BrowserFS.FileSystem.LocalStorage());
+      // Mountpoint for web server.
+      mfs.mount('/web', new BrowserFS.FileSystem.XmlHttpRequest('listings.json', ''));
+    })();
+
+    process = BrowserFS.BFSRequire('process');
+    process.initializeTTYs();
+
+    stdoutBuffer = '';
+    process.stdout.on('data', function(data) {
+    stdoutBuffer += data.toString();
+    var newlineIdx;
+    while ((newlineIdx = stdoutBuffer.indexOf("\n")) > -1) {
+        console.log(stdoutBuffer.slice(0, newlineIdx));
+        stdoutBuffer = stdoutBuffer.slice(newlineIdx + 1);
+    }
+    });
+
+    stderrBuffer = '';
+    process.stderr.on('data', function(data) {
+    stderrBuffer += data.toString();
+    var newlineIdx;
+    while ((newlineIdx = stderrBuffer.indexOf("\n")) > -1) {
+        console.log(stderrBuffer.slice(0, newlineIdx));
+        stderrBuffer = stderrBuffer.slice(newlineIdx + 1);
+    }
+    });
+
+    function runGame() {
+        new Doppio.VM.JVM({
+            doppioHomePath: '/web',
+            classpath: [
+                "/web/libraries/net/sf/jopt-simple/jopt-simple/4.5/jopt-simple-4.5.jar",
+                "/web/libraries/com/paulscode/codecjorbis/20101023/codecjorbis-20101023.jar",
+                "/web/libraries/com/paulscode/codecwav/20101023/codecwav-20101023.jar",
+                "/web/libraries/com/paulscode/libraryjavasound/20101123/libraryjavasound-20101123.jar",
+                "/web/libraries/com/paulscode/librarylwjglopenal/20100824/librarylwjglopenal-20100824.jar",
+                "/web/libraries/com/paulscode/soundsystem/20120107/soundsystem-20120107.jar",
+                "/web/libraries/argo/argo/2.25_fixed/argo-2.25_fixed.jar",
+                "/web/libraries/org/bouncycastle/bcprov-jdk15on/1.47/bcprov-jdk15on-1.47.jar",
+                "/web/libraries/com/google/guava/guava/14.0/guava-14.0.jar",
+                "/web/libraries/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar",
+                "/web/libraries/commons-io/commons-io/2.4/commons-io-2.4.jar",
+                "/web/libraries/net/java/jinput/jinput/2.0.5/jinput-2.0.5.jar",
+                "/web/libraries/net/java/jutils/jutils/1.0.0/jutils-1.0.0.jar",
+                "/web/libraries/com/google/code/gson/gson/2.2.2/gson-2.2.2.jar",
+                "/web/lwjgl",
+                "/web/game.jar"
+            ],
+            nativeClasspath: [
+                "/web/natives"
+            ]
+        }, function(err, jvm) {
+            jvm.runClass('com.bitepp.obcraft.Start', [], function(exitCode) {
+                if (exitCode === 0) {
+                    console.log("Exited successfully");
+                } else {
+                    console.log("Exited with error");
+                }
+            });
+        });
+    }
+</script>
