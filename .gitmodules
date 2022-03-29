@@ -1,0 +1,9 @@
+[submodule "doppio"]
+	path = doppio
+	url = https://github.com/obsidian-craft/doppio.git
+[submodule "browserfs"]
+	path = browserfs
+	url = https://github.com/obsidian-craft/browserfs.git
+[submodule "lwjgl"]
+	path = lwjgl
+	url = https://github.com/obsidian-craft/lwjgl.git
